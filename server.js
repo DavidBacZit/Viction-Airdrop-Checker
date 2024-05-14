@@ -13,6 +13,13 @@ const addressRewards = {
     // Add more addresses and rewards here
 };
 
+// Define the middleware function to enable CORS
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://laughing-funicular-rvp74v7gpgpcrxg-8125.app.github.dev');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
+
 // Define the GET endpoint for the API with the 'address' path parameter
 app.get('/api/:address', (req, res) => {
     const address = req.params.address;
