@@ -15,7 +15,7 @@ const addressRewards = {
 
 // Define the middleware function to enable CORS
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://swap.duckieswap.space/');
+    res.header('Access-Control-Allow-Origin', 'swap.duckieswap.space');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
